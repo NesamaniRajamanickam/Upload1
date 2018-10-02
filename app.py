@@ -4,7 +4,7 @@ from pandas import DataFrame
 
 app = Flask(__name__)
 
-@app.route('/upload', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
         df = pd.read_excel(request.files.get('file'))
